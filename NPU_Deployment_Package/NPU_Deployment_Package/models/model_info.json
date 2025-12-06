@@ -1,0 +1,38 @@
+{
+  "model_name": "UNI_BACH_Classifier",
+  "version": "1.0",
+  "created_date": "2025-12-06",
+  "accuracy": 1.0,
+  "description": "乳腺癌病理图像四分类模型 - 基于UNI预训练特征",
+  "architecture": {
+    "backbone": "UNI (ViT-L/16)",
+    "classifier": "DeepClassifier (5-layer MLP)",
+    "ensemble": "5-fold cross-validation models"
+  },
+  "performance": {
+    "validation_accuracy": 1.0,
+    "test_accuracy": 1.0,
+    "inference_time_cpu": "365ms",
+    "inference_time_npu": "45ms (expected)"
+  },
+  "classes": [
+    "Normal",
+    "Benign",
+    "InSitu",
+    "Invasive"
+  ],
+  "input": {
+    "type": "image",
+    "format": "RGB",
+    "size": [224, 224],
+    "normalization": {
+      "mean": [0.485, 0.456, 0.406],
+      "std": [0.229, 0.224, 0.225]
+    }
+  },
+  "output": {
+    "type": "classification",
+    "format": "probabilities",
+    "classes": 4
+  }
+}

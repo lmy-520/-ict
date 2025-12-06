@@ -1,0 +1,31 @@
+# 推理配置
+
+# 模型配置
+model:
+  ensemble_size: 5  # 集成模型数量
+  feature_dim: 1024  # UNI 特征维度
+  num_classes: 4  # 分类数量
+  class_names:
+    - "Normal"
+    - "Benign"
+    - "InSitu"
+    - "Invasive"
+
+# 推理配置
+inference:
+  batch_size: 16  # 批大小
+  use_tta: false  # 是否使用测试时增强
+  tta_rounds: 10  # TTA 轮数
+  
+# 图像预处理
+preprocessing:
+  image_size: 224  # 输入图像尺寸
+  normalize:
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+  
+# 输出配置
+output:
+  save_results: true  # 是否保存结果
+  output_dir: "results"  # 输出目录
+  save_probabilities: true  # 是否保存概率

@@ -1,0 +1,33 @@
+# Python 依赖包列表
+
+# 深度学习框架
+torch>=1.11.0
+torchvision>=0.12.0
+timm>=0.9.8
+
+# 模型格式
+onnx>=1.12.0
+onnxruntime>=1.13.0
+
+# 数值计算
+numpy>=1.21.0
+
+# 图像处理
+pillow>=9.0.0
+opencv-python>=4.6.0
+
+# 配置文件
+pyyaml>=6.0
+
+# 工具
+tqdm>=4.64.0
+matplotlib>=3.5.0
+seaborn>=0.12.0
+
+# Ascend NPU (需要在 NPU 服务器上安装)
+# ais-bench  # Ascend 推理工具
+# acl  # 通过 whl 文件安装,见 NPU_SETUP_GUIDE.md
+
+# 可选:数据科学
+pandas>=1.4.0
+scikit-learn>=1.0.0
